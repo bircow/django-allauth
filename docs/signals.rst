@@ -11,8 +11,11 @@ allauth.account
 
 - `allauth.account.signals.user_logged_in(request, user)`
 
-  Sent when a user logs in.
-
+  Sent when a user logs in. 
+  
+.. WARNING::
+   There is no `allauth.account.signals.user_logged_out` signal. Use standard Django `django.contrib.auth.user_logged_out <https://docs.djangoproject.com/en/1.10/ref/contrib/auth/#django.contrib.auth.signals.user_logged_out>`_ signal.
+  
 - `allauth.account.signals.user_signed_up(request, user)`
 
   Sent when a user signs up for an account. This signal is
